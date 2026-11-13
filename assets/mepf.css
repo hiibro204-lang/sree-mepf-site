@@ -6,9 +6,10 @@
 .page-hero{background:var(--charcoal);color:#fff;padding:118px 0 64px;position:relative;overflow:hidden}
 .page-hero-img{position:absolute;inset:0;z-index:0}
 .page-hero-img img{width:100%;height:100%;object-fit:cover;opacity:.34}
-.page-hero::before{content:'';position:absolute;inset:0;z-index:1;
-  background:linear-gradient(100deg,rgba(12,12,15,.94) 0%,rgba(12,12,15,.80) 42%,rgba(15,15,18,.35) 100%)}
-.page-hero::after{content:'';position:absolute;left:0;right:0;bottom:0;height:3px;z-index:2;background:var(--grad)}
+.page-hero::before{content:'';position:absolute;top:0;right:0;bottom:0;left:0;width:auto;height:auto;
+  border-radius:0;z-index:1;background:linear-gradient(100deg,rgba(12,12,15,.94) 0%,rgba(12,12,15,.80) 42%,rgba(15,15,18,.35) 100%)}
+.page-hero::after{content:'';position:absolute;left:0;right:0;bottom:0;top:auto;width:auto;height:3px;
+  border-radius:0;z-index:2;background:var(--grad)}
 .page-hero .wrap{position:relative;z-index:3}
 .page-hero .crumb{color:rgba(255,255,255,.55);font-family:var(--font-m);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:16px}
 .page-hero .crumb a{color:rgba(255,255,255,.8)}
@@ -35,3 +36,11 @@
 /* contact form button sits inside the card */
 .form-card .btn{margin-top:6px;width:100%;justify-content:center}
 .form-card form{margin-top:18px}
+
+/* ---- compact capability rail (division paths with longer labels) ---- */
+.cap-rail.compact .cap-node{padding:20px 16px;min-width:104px}
+.cap-rail.compact .cap-node .kv{font-size:17px;letter-spacing:0;white-space:nowrap}
+.cap-rail.compact .cap-node .lbl{font-size:9.5px;letter-spacing:.06em;text-align:center;white-space:nowrap}
+.cap-rail.compact .cap-arrow{padding:0 7px;font-size:15px}
+@media(max-width:700px){.cap-rail.compact .cap-node{padding:14px 12px;min-width:88px}
+ .cap-rail.compact .cap-node .kv{font-size:14px}.cap-rail.compact .cap-node .lbl{font-size:8.5px}}

@@ -76,3 +76,9 @@
 .fact .fv{font-family:var(--font-d);font-weight:800;font-size:30px;letter-spacing:-.02em;
   background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
 .fact .fl{font-family:var(--font-m);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);margin-top:6px}
+
+/* ---- hero stat row: four columns, no label collision ---- */
+.hero-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px 28px;max-width:820px;align-items:start}
+.hero-stat .v{font-size:clamp(20px,2.1vw,30px);line-height:1.1}
+.hero-stat .l{font-size:10px;letter-spacing:.1em;line-height:1.4;margin-top:6px}
+@media(max-width:760px){.hero-stats{grid-template-columns:1fr 1fr;gap:18px}}

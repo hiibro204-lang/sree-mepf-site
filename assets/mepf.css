@@ -1,0 +1,37 @@
+/* SREE ENGINEERING - MEPF extension layer.
+   Loaded after style.css: adds the page-hero image band, the standards note and
+   two small layout helpers. Everything else reuses the existing design system. */
+
+/* ---- inner page hero with photograph ---- */
+.page-hero{background:var(--charcoal);color:#fff;padding:118px 0 64px;position:relative;overflow:hidden}
+.page-hero-img{position:absolute;inset:0;z-index:0}
+.page-hero-img img{width:100%;height:100%;object-fit:cover;opacity:.34}
+.page-hero::before{content:'';position:absolute;inset:0;z-index:1;
+  background:linear-gradient(100deg,rgba(12,12,15,.94) 0%,rgba(12,12,15,.80) 42%,rgba(15,15,18,.35) 100%)}
+.page-hero::after{content:'';position:absolute;left:0;right:0;bottom:0;height:3px;z-index:2;background:var(--grad)}
+.page-hero .wrap{position:relative;z-index:3}
+.page-hero .crumb{color:rgba(255,255,255,.55);font-family:var(--font-m);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:16px}
+.page-hero .crumb a{color:rgba(255,255,255,.8)}
+.page-hero .crumb a:hover{color:var(--orange)}
+.page-hero h1{color:#fff;font-size:clamp(30px,4.2vw,52px);line-height:1.08;letter-spacing:-.02em;max-width:26ch}
+.page-hero h1 .r{color:var(--orange)}
+.page-hero p{color:rgba(255,255,255,.72);font-size:clamp(15px,1.25vw,17.5px);max-width:62ch;margin-top:16px;line-height:1.65}
+
+/* ---- standards band ---- */
+.note-band{background:#fff;border:1px solid var(--grey3);border-left:4px solid var(--orange);border-radius:0 var(--r) var(--r) 0;
+  padding:20px 26px;font-size:14px;line-height:1.7;color:var(--text2);box-shadow:var(--shadow)}
+.note-band strong{color:var(--ink);font-family:var(--font-d);font-weight:700}
+
+/* ---- small helpers ---- */
+.section.tight{padding:38px 0}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+@media(max-width:820px){.two-col{grid-template-columns:1fr;gap:26px}}
+.two-col h3{font-family:var(--font-d);font-weight:700}
+
+/* division accent used on service cards */
+.svc-card{--acc:var(--red)}
+.svc-img .n{color:#fff;background:var(--acc);padding:4px 10px;border-radius:100px}
+
+/* contact form button sits inside the card */
+.form-card .btn{margin-top:6px;width:100%;justify-content:center}
+.form-card form{margin-top:18px}
